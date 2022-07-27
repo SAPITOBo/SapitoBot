@@ -17,6 +17,7 @@ conn.sendFile(m.chat, thumb, 'error.jpg', `
 *📁 𝙿𝙴𝚂𝙾:* ${filesizeF}
 *🔗 𝚄𝚁𝙻:* ${vid.url}
 *📥 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁:* ${shortUrl}
+        _SapitoBot_
 `.trim(), m, false, { 
 contextInfo: { externalAdReply: {
 title: 'ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ',
