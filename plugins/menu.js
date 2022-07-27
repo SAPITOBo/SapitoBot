@@ -11,6 +11,13 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 try {
 } catch (e) {
 } finally {
+let weeks = new Date
+let dia = weeks.toLocaleDateString('es', { weekday: 'long' })
+let calender = weeks.toLocaleDateString('es', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric'
+	})
 let { name, limit, exp, banned, lastclaim, registered, regTime, age, level } = global.db.data.users[m.sender]
 let { min, xp, max } = levelling.xpRange(level, global.multiplier)
 let username = conn.getName(who)
@@ -18,6 +25,7 @@ let menu = `
 ╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ║➤ *✨𝗛ola, ${username}!!*
+   Fecha: `${dia} ${calender}`
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ╰══╡✯✯✯✯✯✯✯✯╞══╯
 ┏━━━━━━━━━━━━━┓
